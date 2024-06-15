@@ -185,3 +185,8 @@ hr{
     font-size: 12px;
 }
 
+@media (max-width: 900px){
+    .search input{
+        width: 25rem;
+    }
+}
