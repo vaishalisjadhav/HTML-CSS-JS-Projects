@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark/Light Mode</title>
+    <style>
+        body{
+            background-color: white;
+            color: black;
+        }
+
+        .darkMode{
+            background-color: black;
+            color: white;
+        }
+
+        .lightMode{
+            background-color: white;
+            color: black;
+        }
+
+        img{
+            height: 350px;
+            width: 300px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+    <h1>Red Rose Mastani</h1><br><br>
+    <img src="Images/red-rose-mastani.jpg"><br><br><br>
+    <button onclick="darkMode()">DarkMode</button>
+    <button onclick="lightMode()">LightMode</button>
+    </div>
+    
+    <script>
+        function darkMode(){
+            let element = document.body;
+            element.className = "darkMode";
+        }
+        function lightMode(){
+            let element = document.body;
+            element.className = "lightMode";
+        }
+    </script>
+</body>
+</html>
