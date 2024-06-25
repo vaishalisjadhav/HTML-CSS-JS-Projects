@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            justify-content: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+        .heading3 {
+            color: #555;
+            margin: 10px 0;
+        }
+        .input-num {
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .result {
+            font-size: 20px;
+            color: #28a745;
+            margin: 15px 0;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sum Of Two Numbers</h1>
+    <div class="container">
+        <h3 class="heading3">Enter 1st Number</h3>
+        <input type="text" class="input-num" id="num1">
+        <h3 class="heading3">Enter 2nd Number</h3>
+        <input type="text" class="input-num" id="num2">
+        <p class="result" id="result"></p>
+        <button type="button" class="btn" onclick="Calculate()">Calculate</button>
+        <button type="button" class="btn" onclick="Clear()">Clear</button>
+    </div>
+
+    <script>
+        function Calculate() {
+            const number1 = document.getElementById("num1")
+            const number2 = document.getElementById("num2")
+
+            const sum = parseInt(number1.value) + parseInt(number2.value)
+
+            const result = document.getElementById("result")
+            result.innerText = `Sum is: ${sum}`
+        }
+        function Clear() {
+            const number1 = document.getElementById("num1")
+            number1.value= ""
+
+            const number2 = document.getElementById("num2")
+            number2.value= ""
+
+            const result = document.getElementById("result")
+            result.innerText= ""
+        }
+    </script>
+</body>
+</html>
