@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview Page</title>
+    <style>
+        body{
+            background-color: rgb(246, 156, 92);
+        }
+        .heading{
+            font-size: 30px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            color: black;
+        }
+        #main-product-image{
+            height: 400px;
+            width: 400px;
+            object-fit: contain;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+            margin: 20px auto;
+            display: block;
+        }
+        .product-image{
+            height: 80px;
+            width: 80px;
+            object-fit: contain;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .product-images-container{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Product Preview</h1>
+    <img src="./Images/image-product-1.jpg" id="main-product-image">
+    <div class="product-images-container">
+        <img src="./Images/image-product-1.jpg" class="product-image" onclick="changeImage(1)">
+        <img src="./Images/image-product-2.jpg" class="product-image" onclick="changeImage(2)">
+        <img src="./Images/image-product-3.jpg" class="product-image" onclick="changeImage(3)">
+        <img src="./Images/image-product-4.jpg" class="product-image" onclick="changeImage(4)">
+    </div>
+
+    <script>
+        function changeImage(num) {
+            const mainImg = document.getElementById(`main-product-image`)
+
+            if(num==1){
+                mainImg.src = "./Images/image-product-1.jpg"
+            } else if(num==2){
+                mainImg.src = "./Images/image-product-2.jpg"
+            } else if(num==3){
+                mainImg.src = "./Images/image-product-3.jpg"
+            } else if(num==4){
+                mainImg.src = "./Images/image-product-4.jpg"
+            }
+        }
+    </script>
+</body>
+</html>
