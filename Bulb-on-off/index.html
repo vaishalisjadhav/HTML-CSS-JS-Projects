@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Toggler</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .heading {
+            text-align: center;
+            color: #333;
+            margin-top: 50px;
+        }
+        .img-bulb-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px auto;
+            padding: 20px;
+            border: 5px solid #4CAF50;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 200px;
+        }
+        .img-bulb {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .btn-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Bulb Toggler</h1>
+    <div class="img-bulb-container">
+        <img id="img-bulb" src="bulb-off.png" class="img-bulb">
+    </div>
+    <div class="btn-container">
+        <button type="button" onclick="bulbOn()">ON</button>
+        <button type="button" onclick="bulbOff()">OFF</button>
+    </div>
+
+    <script>
+        function bulbOn() {
+            const bulbEle = document.getElementById("img-bulb");
+            bulbEle.src = "bulb-on.png";
+        }
+
+        function bulbOff() {
+            const bulbEle = document.getElementById("img-bulb");
+            bulbEle.src = "bulb-off.png";
+        }
+    </script>
+</body>
+</html>
