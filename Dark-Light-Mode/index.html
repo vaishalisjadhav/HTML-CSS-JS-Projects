@@ -3,36 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark/Light Mode</title>
+    <title>Red Rose Mastani</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body{
-            background-color: white;
-            color: black;
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s, color 0.5s;
         }
 
-        .darkMode{
-            background-color: black;
-            color: white;
+        .container {
+            text-align: center;
+            padding: 50px;
         }
 
-        .lightMode{
-            background-color: white;
-            color: black;
+        h1{
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #b3003b;
         }
 
-        img{
-            height: 350px;
-            width: 300px;
-            border-radius: 10px;
+        p{
+            text-align: center;
+            margin-left: 250px;
+            margin-right: 250px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin: 20px 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .darkMode {
+            background-color: #1a1a1a;
+            color: #e6e6e6;
+        }
+
+        .darkMode button {
+            background-color: #444;
+            color: #e6e6e6;
+        }
+
+        .lightMode {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .lightMode button {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        button:hover {
+            background-color: #e68a00;
+            color: #fff;
+        }
+
+        .lightMode button:hover {
+            background-color: #b3003b;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    <div style="text-align: center;">
-    <h1>Red Rose Mastani</h1><br><br>
-    <img src="Images/red-rose-mastani.jpg"><br><br><br>
-    <button onclick="darkMode()">DarkMode</button>
-    <button onclick="lightMode()">LightMode</button>
+    <div class="container">
+        <h1>Red Rose Mastani</h1>
+        <img src="Images/red-rose-mastani.jpg" alt="Red Rose Mastani">
+        <br><br>
+        <p>Red Rose Mastani embodies elegance and allure, symbolizing a blend of passion and sophistication. Whether as a character in literature or folklore, or as a product or brand, it evokes a sense of timeless beauty and grace. Often associated with romance and mystery, 'Red Rose Mastani' captivates with its rich symbolism and cultural resonance. Whether in stories or as a metaphorical representation, it signifies a figure or entity that stands out for its striking appearance and deep, intriguing qualities, leaving an impression of enchantment and fascination.</p>
+        <button onclick="darkMode()">Dark Mode</button>
+        <button onclick="lightMode()">Light Mode</button>
     </div>
     
     <script>
