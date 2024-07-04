@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h4 {
+            font-size: 2em;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+
+        #txtInput {
+            width: 80%;
+            height: 100px;
+            padding: 10px;
+            font-size: 1.2em;
+            border: 2px solid #ff7e67;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        #answer {
+            display: block;
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: #4a4a4a;
+            font-weight: bold;
+        }
+
+        #btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            background-color: #ff7e67;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .btn i {
+            margin-left: 8px;
+        }
+
+        .btn:hover {
+            background-color: #ff5436;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Magic Text </h4>
+    <textarea placeholder="enter your text here" id="txtInput"></textarea>
+    <span class="answer" id="answer"><i class="ri-eye-fill"></i><i class="ri-eye-fill"></i></span>
+    <div id="btn-container">
+        <button class="btn" onclick="textOper('lower')">Lowerase <i class="ri-arrow-up-double-line"></i></button>
+        <button class="btn" onclick="textOper('upper')">Uppercase <i class="ri-arrow-down-double-line"></i></button>
+        <button class="btn" onclick="textOper('countLetters')">Count letters <i class="ri-links-line"></i></button>
+        <button class="btn" onclick="textOper('countWord')">Count words <i class="ri-questionnaire-line"></i></button>
+    </div>
+
+    <script>
+
+        function textOper(opration) {
+
+            let input = document.getElementById('txtInput').value;
+            let answer = document.getElementById("answer")
+
+
+            switch (opration) {
+
+                case 'upper':
+                    answer.innerText = input.toUpperCase();
+                    break;
+
+                case 'lower':
+                    answer.innerText = input.toLowerCase()
+                    break;
+
+                case 'countLetters':
+                    answer.innerText = `Total letters: ${input.length}`
+                    break;
+
+                default:
+                    answer.innerText = `Total words:${input.split(" ").length}`
+                    break;
+            }
+        }  
+    </script>
+</body>
+
+</html>
