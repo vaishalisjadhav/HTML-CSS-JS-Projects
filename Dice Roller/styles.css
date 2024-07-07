@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.dice-roller {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#dice-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+#dice-image:hover {
+    transform: rotate(10deg);
+}
+
+#roll-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    align-self: center;
+}
+
+#roll-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+#roll-button:active {
+    transform: scale(1);
+}
